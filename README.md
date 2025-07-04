@@ -2,7 +2,7 @@
 An interesting technique on Windows (x64) to "hook" or breakpoint in process memory via VEH and PAGE_NOACCESS page permissions
 
 ## Use Case
-The technique is useful in cases where you cannot easily write to memory, either due to integrity checks, re-mapped memory with `SEC_NO_CHANGE`, or kernelmode protections. It can also be used for debugging. I've used it for logging & modifying game packets in a few games including MapleStoryN which uses a kernelmode AC; many usermode ACs also won't detect this since it's not using standard/traditional debugging methods. 
+The technique is useful in cases where you cannot easily read/write to memory, either due to integrity checks, debug checks, or kernelmode protections. It can also be used for debugging, working similar to a VEH debugger. I've used it for logging & modifying game packets in a few games including MapleStoryN which uses a kernelmode AC; many usermode ACs also won't detect this since it's not using standard/traditional debugging methods and no memory in .text needs to be written to.  
 
 ## How it works  
 1. We inject the module using a manual mapper, or some other stealthy method   
