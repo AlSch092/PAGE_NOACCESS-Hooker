@@ -15,6 +15,8 @@ The technique is useful in cases where you cannot easily write to memory, either
 ## Downsides & Warnings  
 There's no guarantee that what you test this on will or won't detect the technique. This repo is meant to serve as a proof of concept for an alternative method to traditional hooking. If extreme care is not taken, the process will probably crash, so make sure you know what you're doing. In cases where your desired offset has other addresses on the same page rapidly hit during execution, this might not be a good method to use. This is definitely best used for purposes such as packet logging/modifying, or basic runtime analysis.  
 
+## Example  
+MapleStoryN, injected via manual mapping before its kernelmode driver is loaded:  
 ![Example](https://github.com/user-attachments/assets/dc22e34f-7f73-4c7a-ab0f-295c2c27c633)  
 
 Happy coding!  
